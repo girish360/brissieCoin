@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" EnableTheming="true" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Brissie Coin Palace</title>
+
+</head>
+<body>
+    <form id="form" runat="server">
+        <div class="page-wrapper">
+
+            <!--header-->
+            <div id="header">
+                <asp:ContentPlaceHolder ID="head" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <!--breadcrumb-->
+            <div id="breadcrumb">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+            </div>
+
+            <!--main content-->
+            <div id="main">
+                <div id="menu">
+                    <aside id="Aside1">
+                        <asp:Label ID="Label1" runat="server" Text="Select a theme :"></asp:Label>
+                        <br />
+                        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                            <asp:ListItem>Monochrome</asp:ListItem>
+                            <asp:ListItem>Color</asp:ListItem>
+                        </asp:DropDownList>
+
+                        <p>
+                            Naviagation<br />
+                            =================
+                        </p>
+
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1"></asp:TreeView>
+
+                        <br />
+
+                        <!---- login--->
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                <asp:Login ID="Login1" runat="server" CreateUserText="Not a member? Please Register" CreateUserUrl="~/Pages/Register.aspx" DisplayRememberMe="False"></asp:Login>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                Welcome back
+                                 <br />
+                                <asp:LoginName ID="LoginName1" runat="server" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+
+
+
+
+                    </aside>
+
+                </div>
+
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <!--footer-->
+            <div id="footer">
+                <div id="copyright">
+                    <u>&copy; Sanil & Suraj 2015</u>
+                    <br />
+                    All images &copy; Sanil & Suraj
+                </div>
+                <div id="lastupdate">Last Updated: 17/04/2015</div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

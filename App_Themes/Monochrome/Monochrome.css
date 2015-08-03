@@ -1,0 +1,178 @@
+﻿/*  Monochrome.CSS
+    This CSS file is available on the Resources Kit for the Assignment 1 Section in the Moodle Course Web site
+    CSS is used to give style to web pages separating content from presentation. Any change in the CSS style
+    affect all pages linked to that CSS on that item appears - Beginning ASP.NET 4 in C# and VB    
+*/
+
+body {
+    margin: 1%;
+    width: 98%;
+    height: 100%;
+    font-size: 14px;
+    background-color: #999999;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+#header /*Header Style*/ {
+    border: none;
+    height: 109px;
+    width: 100%;
+    background-color: white;
+    background-image: url('../../App_Themes/Monochrome/Images/BCPLogoMonochrome.jpg'); /*Attach the Grey image to the header background*/
+}
+
+    #header a {
+        height: 100pt;
+        width: 100%;
+        border: none;
+    }
+
+#breadcrumb /*BreadCrumb Style*/ {
+    width: 100%;
+    height: 5%;
+    padding-left: 0.3em;
+}
+
+#main /*Main Style*/ {
+    height: 75%;
+    width: 100%;
+    text-align: center;
+}
+
+#sidebar /*Sidebar Style*/ {
+    height: 100%;
+    width: 20%;
+    float: left;
+    text-align: left;
+}
+
+#menu /*Menu Style*/ {
+    background-color: #c0c0c0;
+    float: left;
+    text-align: left;
+    width: 20%;
+    padding: 20px 2px;
+}
+
+#loginarea /*Login Area Style - Not available in this Assignment */ {
+    height: 25%;
+}
+
+#home-page-image /*Header Style*/ {
+    background-image: url("../../App_Themes/Monochrome/Images/HomePic_Mono.jpg");
+    background-repeat: no-repeat;
+    border: medium none;
+    height: 311px;
+    margin: 0 auto;
+    width: 473px;
+}
+
+#content /*Content Style*/ {
+    background-color: #cccccc;
+    border: 0 none;
+    color: black;
+    float: right;
+    width: 78%;
+    padding: 1em 0;
+    min-height: 332px;
+}
+
+/* These following two rulesets should be applied to the CssClass properties of your
+   navigation menu.  You should be able to work out which class to
+   apply where from the names.  When you apply these rules you will get the appearance
+   and colour scheme described in the assessment.  */
+
+.dynamicMenuItem, .staticMenuItem {
+    display: block;
+    width: 99.99%;
+    background-color: #777777;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 0.2em;
+}
+
+.dynamicHoverStyle, .staticHoverStyle {
+    text-decoration: none;
+    color: #000000;
+    background-color: #777777;
+}
+
+.loginControl {
+    font-size: x-small;
+    width: inherit;
+}
+
+
+#footer /*FooterStyle*/ {
+    height: 5%;
+    width: 100%;
+    clear: both;
+    padding: 0em 0.3em 0em 0.3em;
+}
+
+#copyright /*CopyRight Style*/ {
+    float: left;
+}
+
+#lastupdate /*Last Update Style*/ {
+    float: right;
+}
+
+.leftalign {
+    text-align: left;
+}
+
+p, #menu h2, #menu h3 {
+    padding: 5px;
+}
+
+/* The CSS rules below will style all hyperlinks outside of the menu. 
+   The menu links should be styled by the .dynamic rulesets.  Unfortunately
+   the rules below are a little clumsy, but I have to explicitly
+   exclude the menu div from the rules below otherwise they override the 
+   .dynamic classes applied to the menu control, and the hover doesn't 
+   quite work properly when styled by virtual classes.  */
+
+#breadcrumb a:link, #loginarea a:link, #footer a:link {
+    color: #000000;
+}
+
+#breadcrumb a:visited, #loginarea a:visited, #footer a:visited {
+    color: #CC9900;
+}
+
+#breadcrumb a:hover, #loginarea a:hover, #footer a:hover {
+    color: yellow;
+}
+
+
+#IntroText /*Style for the Introduction letters in the Content Area*/ {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/***********************************************/
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    margin: 0px auto;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
+    padding: 0px;
+    width: 0px;
+}
